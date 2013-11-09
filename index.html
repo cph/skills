@@ -1,0 +1,349 @@
+<html>
+  <head>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        background: #333;
+        color: #999;
+        font-family: calibri;
+        font-weight: 100;
+        font-size: 15px;
+        padding: 3em;
+      }
+      #container {
+        margin: 0 auto;
+        max-width: 36em;
+        position: relative;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: 100;
+        margin-bottom: 0.33em;
+        color: #666;
+      }
+      h1 { font-size: 2.66em; margin-bottom: 0; }
+      h2 { font-size: 2em; margin-top: 2.33em; }
+      a[href] {
+        font-style: normal;
+        color: #999;
+        font-weight: 400;
+        text-decoration: none;
+        border-bottom: 1px solid #555;
+      }
+      em a[href] { color: #c0c0c0; }
+      em a[href]:hover { color: #eee; }
+      a[href]:hover {
+        color: #c0c0c0;
+        border-bottom: 1px solid #888;
+      }
+      em {
+        font-style: normal;
+        color: #c0c0c0;
+        font-weight: 400;
+      }
+      q {
+        font-weight: 400;
+        color: #B8A78A;
+      }
+      q::before { content: ''; }
+      q::after { content: ''; }
+      
+      .skill {
+        font-size: 16px;
+        position: relative;
+        margin: 0 -1em;
+        height: 2em;
+      }
+      .skill.skill-with-labels { margin-bottom: 1.25em; }
+      .progress {
+        position: absolute;
+        left: 2em;
+        width: 17em;
+        top: 0.875em;
+        height: 0.25em;
+        background: #4b4b4b;
+        z-index: -2;
+      }
+      .progress::before {
+        content: "\f178";
+        display: inline-block;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #4b4b4b;
+        position: absolute;
+        left: 10em;
+        top: -0.39285714285714em;
+        font-size: 1.75em;
+        z-index: -2;
+      }
+      .progress-101::before { color: #b0b0b0; }
+      .progress::after {
+        content: '.';
+        color: transparent;
+        display: block;
+        position: absolute;
+        left: 0;
+        height: 0.25em;
+        background: #b0b0b0;
+        z-index: -1;
+      }
+      
+      .progress-13::after { width: 13%; }
+      .progress-18::after { width: 18%; }
+      .progress-33::after { width: 33%; }
+      .progress-38::after { width: 38%; }
+      .progress-51::after { width: 51%; }
+      .progress-100::after { width: 100%; }
+      .progress-101::after { width: 100%; }
+      .rank {
+        background-image: url(img/badges-unachieved-4b.png);
+        background-size: 10em 2em;
+        
+        margin: 0 1em;
+        
+        display: inline-block;
+        width: 2em;
+        height: 2em;
+      }
+      .rank-novice { background-position: 0 0; }
+      .rank-beginner { background-position: -2em 0; }
+      .rank-competent { background-position: -4em 0; }
+      .rank-proficient { background-position: -6em 0; }
+      .rank-master { background-position: -8em 0; }
+      .rank-achieved { background-image: url(img/badges-achieved.png); }
+      
+      .skill-with-labels .rank::after {
+        position: absolute;
+        top: 4.375em;
+        width: 4em;
+        text-align: center;
+        color: #666;
+        font-size: 0.5em;
+        line-height: 1em;
+        font-style: normal;
+        font-weight: 100;
+      }
+      .skill-with-labels .rank.rank-achieved::after { color: #c0c0c0; }
+      .skill-with-labels .rank-novice::after { content: 'Novice'; }
+      .skill-with-labels .rank-beginner::after { content: 'Advanced Beginner'; }
+      .skill-with-labels .rank-competent::after { content: 'Competent'; }
+      .skill-with-labels .rank-proficient::after { content: 'Proficient'; }
+      .skill-with-labels .rank-master::after { content: 'Master'; }
+      
+      dl.performance-review {
+        margin-left: 24px;
+        overflow: hidden;
+      }
+      dl.performance-review dt {
+        float: left;
+        clear: left;
+        padding: 0.25em 0;
+        line-height: 24px;
+      }
+      dl.performance-review dd {
+        margin-left: 11em;
+        padding: 0.25em 0;
+      }
+      dl.performance-review .skill { font-size: 12px; }
+      
+      li dl { margin: 0; padding: 0; }
+      li dl dt { float: left; clear: left; line-height: 1em; }
+      li dl dd { margin-left: 11em; }
+      dd ul {
+        margin: 0;
+        padding: 0;
+        color: #666;
+      }
+      dd ul:before {
+        content: "\f105";
+        font-family: 'FontAwesome';
+        position: absolute;
+        left: 12.5em;
+      }
+      dd ul li { display: block; }
+      dd ul li a[href] { color: #666; border-color: #4a4a4a; }
+      dd ul li a[href]:hover { color: #aaa; }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      
+      
+      
+      <h1>The Path to Mastery</h1>
+        
+        <div class="skill skill-with-labels">
+          <div class="progress progress-101"></div>
+          <i class="rank rank-novice rank-achieved"></i>
+          <i class="rank rank-beginner rank-achieved"></i>
+          <i class="rank rank-competent rank-achieved"></i>
+          <i class="rank rank-proficient rank-achieved"></i>
+          <i class="rank rank-master rank-achieved"></i>
+        </div>
+      
+      
+      
+      <h2>Goals</h2>
+        
+        <p>
+          I want to write a new Performance Review form specific to us. It should:
+        </p>
+        <ol>
+          <li> Focus on our <em>technical</em> skills </li>
+          <li> Use an <em>absolute</em> scale rather than one relative to our current titles </li>
+          <li> Make <em>achievements</em> transparent </li>
+          <li> Be the product of an <em>open</em> process </li>
+        </ol>
+      
+      
+      
+      <h2>Example</h2>
+        
+        <p>
+          A review could look like this:
+        </p>
+        <dl class="performance-review">
+          <dt> Ruby </dt>
+          <dd>
+            <div class="skill">
+              <div class="progress progress-38"></div>
+              <i class="rank rank-novice rank-achieved"></i>
+              <i class="rank rank-beginner rank-achieved"></i>
+              <i class="rank rank-competent"></i>
+              <i class="rank rank-proficient"></i>
+              <i class="rank rank-master"></i>
+            </div>
+          </dd>
+          
+          <dt> Javascript/Coffeescript </dt>
+          <dd>
+            <div class="skill">
+              <div class="progress progress-18"></div>
+              <i class="rank rank-novice rank-achieved"></i>
+              <i class="rank rank-beginner"></i>
+              <i class="rank rank-competent"></i>
+              <i class="rank rank-proficient"></i>
+              <i class="rank rank-master"></i>
+            </div>
+          </dd>
+          
+          <dt> Git </dt>
+          <dd>
+            <div class="skill">
+              <div class="progress progress-51"></div>
+              <i class="rank rank-novice rank-achieved"></i>
+              <i class="rank rank-beginner rank-achieved"></i>
+              <i class="rank rank-competent rank-achieved"></i>
+              <i class="rank rank-proficient"></i>
+              <i class="rank rank-master"></i>
+            </div>
+          </dd>
+          
+          <dt> jQuery/DOM </dt>
+          <dd>
+            <div class="skill">
+              <div class="progress progress-13"></div>
+              <i class="rank rank-novice rank-achieved"></i>
+              <i class="rank rank-beginner"></i>
+              <i class="rank rank-competent"></i>
+              <i class="rank rank-proficient"></i>
+              <i class="rank rank-master"></i>
+            </div>
+          </dd>
+          
+          <dt> OO Programming </dt>
+          <dd>
+            <div class="skill">
+              <div class="progress progress-33"></div>
+              <i class="rank rank-novice rank-achieved"></i>
+              <i class="rank rank-beginner rank-achieved"></i>
+              <i class="rank rank-competent"></i>
+              <i class="rank rank-proficient"></i>
+              <i class="rank rank-master"></i>
+            </div>
+          </dd>
+        </dl>
+      
+      
+      
+      <h2>Explanation</h2>
+        
+        <p>
+          My plan is to group our skills into <em>four categories</em>:
+        </p>
+        <ol>
+          <li> Dexterity with <em>Tools</em> </li>
+          <li> Fluency with <em>Languages</em> </li>
+          <li> Knowledge of <em>Frameworks</em> </li>
+          <li> Mastery of <em>Techniques</em> </li>
+        </ol>
+        
+        <p>
+          And to describe <em>five milestones</em> for each:
+        </p>
+        <ol>
+          <li><dl>
+            <dt> <em>Novice</em> </dt>
+            <dd><ul>
+              <li>Unaware of context</li>
+              <li>Must follow context-free rules</li>
+            </ul></dd>
+          </dl></li>
+          
+          <li><dl>
+            <dt> <em>Advanced Beginner</em> </dt>
+            <dd><ul>
+              <li>Recognizes aspects of context</li>
+              <li>Can start applying context-sensitive rules</li>
+            </ul></dd>
+          </dl></li>
+          
+          <li><dl>
+            <dt> <em>Competent</em> </dt>
+            <dd><ul>
+              <li>Appreciates breadth of context; analyzes it slowly</li>
+              <li>Applies rules of thumb</li>
+            </ul></dd>
+          </dl></li>
+          
+          <li><dl>
+            <dt> <em>Proficient</em> </dt>
+            <dd><ul>
+              <li>Has <a href="http://en.wikipedia.org/wiki/Memoization">memoized</a> analysis of very many contexts</li>
+              <li>Makes decisions consciously</li>
+            </ul></dd>
+          </dl></li>
+          
+          <li><dl>
+            <dt> <em>Master</em> </dt>
+            <dd><ul>
+              <li>Acts instinctively</li>
+            </ul></dd>
+          </dl></li>
+        </ol>
+        
+        (Read more about the Dreyfus model in <a href="http://www.dtic.mil/cgi-bin/GetTRDoc?AD=ADA084551">their original paper</a>.)
+      
+      
+      
+      <h2>I would like your help</h2>
+        
+        <ul>
+          <li> Refining the concept </li>
+          <li> Finalizing the list of skills to include </li>
+          <li> Describing milestones for each skill </li>
+        </ul>
+        
+        <p>
+          <em><a href="https://github.com/concordia-publishing-house/skills">Fork this repo</a></em> to add or remove skills, milestones, or wording.<br />
+          Then defend your changes with a pull request.
+        </p>
+      
+      
+      
+    </div>
+  </body>
+</html>
