@@ -3,24 +3,44 @@
 #### Path to Mastery
 
 <table>
-  <tr><th valign="top" align="left">Advanced Beginner</th><td>
-    <li>Able to write unit, functional tests, integration tests</li>
-    <li>Runs the test suite regularly before pushing changes</li>
-  </td></tr>
+  <tr>
+    <th valign="top" align="left">Advanced Beginner</th>
+    <td>
+      <ul>
+        <li>Able to write unit, functional tests, integration tests</li>
+        <li>Runs the test suite regularly before pushing changes</li>
+      <ul>
+    </td>
+  </tr>
   
-  <tr><th valign="top" align="left">Competent</th><td>
-    <li>Able to use test doubles and spies (mocks and stubs)</li>
-  </td></tr>
+  <tr>
+    <th valign="top" align="left">Competent</th>
+    <td>
+      <ul>
+        <li>Able to use test doubles and spies (mocks and stubs)</li>
+      </ul>
+    </td>
+  </tr>
   
-  <tr><th valign="top" align="left">Proficient</th><td>
-    <li>Has written tests in various frameworks and languages (Minitest, Rspec, Cucumber, Vows, Mocha, Jasmine, etc)</li>
-    <li>Has attempted TDD in a discipled way</li>
-    <li>Testing influences the design of the code</li>
-  </td></tr>
+  <tr>
+    <th valign="top" align="left">Proficient</th>
+    <td>
+      <ul>
+        <li>Has written tests in various frameworks and languages (Minitest, Rspec, Cucumber, Vows, Mocha, Jasmine, etc)</li>
+        <li>Has attempted TDD in a discipled way</li>
+        <li>Testing influences the design of the code</li>
+      </ul>
+    </td>
+  </tr>
   
-  <tr><th valign="top" align="left">Expert</th><td>
-    <li>Testing is part of problem solving</li>
-  </td></tr>
+  <tr>
+    <th valign="top" align="left">Expert</th>
+    <td>
+      <ul>
+        <li>Testing is part of problem solving</li>
+      </ul>
+    </td>
+  </tr>
 </table>
 
 
